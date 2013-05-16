@@ -1,0 +1,97 @@
+.vip {
+	height: 620px;
+	background: #efefef;
+	font: Arial, Helvetica, sans-serif;
+}
+.vip2{
+	height: 510px;
+	background: #efefef;
+	font: Arial, Helvetica, sans-serif;
+}
+.vip_content {
+	width:908px;
+	margin:0 auto;
+}
+.vip_nav {
+	float: left;
+	height:152px;
+	width: 168px;
+	background:url(../shadow.png) 5px top no-repeat;
+}
+.vip_info {
+	float: left;
+	height: 520px;
+	width: 600px;
+	background: #d7d7d7;
+	padding: 20px;
+	margin-top: 24px;
+	margin-right: 100px;
+	margin-bottom: 32px;
+	margin-left: 0;
+}
+.vipnav{
+    display: block;
+	width:70px;
+	text-align: left;
+	color: #5d5d5d;
+	font-size: 12px;
+	margin:20px;
+	
+}
+.loginnav{
+    display: block;
+	width:70px;
+	text-align: left;
+	color: #5d5d5d;
+	font-size: 12px;
+	margin:25px 20px 20px 95px;
+}
+.vip_info p {
+	font-size: 11px;
+	color: #5d5d5d;
+}
+.vip_info a {
+	margin-top: 15px;
+	display: block;
+	margin-left: 25px;
+}
+.login_info {
+	float: left;
+	height: 169px;
+	width: 426px;
+	margin-top: 150px;
+	margin-left: 73px;
+	overflow: hidden;
+	background:url(../login_bg.jpg) no-repeat;
+}
+.login_info h4 {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 16px;
+	color: #FFF;
+	margin-bottom: 6px;
+}
+.login {
+	font-size: 11px;
+	color: #FFF;
+	padding-left: 80px;
+}
+.login input {
+	margin-left: 15px;
+	padding: 2px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	background:#e4e4e4;
+	border:none;
+}
+.login a {
+}
+.L_button {
+	margin-left: 80px;
+	margin-top:10px;
+}
+.L_button a {
+	margin-left: 10px;
+	
+	color: #FFF;
+}
