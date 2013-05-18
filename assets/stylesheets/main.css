@@ -1,5 +1,5 @@
 body {
-	font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif,'굴림';
+	font-family:  Arial,"微软雅黑", "宋体",'굴림';
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 22px;
@@ -28,7 +28,7 @@ body a,body a:hover,body a:active,body a:link{
 	background-position: bottom;
 }
 .main{
-	height: auto;
+	min-height: 487px;
 	background-color: #e1e1e1;
 	margin-top: 0px;
 }
@@ -41,6 +41,7 @@ body a,body a:hover,body a:active,body a:link{
 	color: #ffffff;
 	font-size: 10px;
 	position: relative;
+	z-index:100;
 }
 .container{
 	width:970px;
@@ -157,7 +158,8 @@ body a,body a:hover,body a:active,body a:link{
 	font-size: 10px;
 	line-height: 35px;
 	height: 35px;
-	position:relative;
+	position: relative;
+	z-index: 1000;
 }
 .mainNav li {
 	float: left;
@@ -187,11 +189,15 @@ body a,body a:hover,body a:active,body a:link{
 	color: #ffffff;
 	text-decoration: none;
 	text-shadow: 0px 0px 1px #FFFFFF;
+	z-index: 2000;
+	height: 35px;
+	display: block;
 }
 .rightNav {
 	position: absolute;
 	top: 0px;
 	right: 40px;
+	z-index: 1001;
 }
 .rightNav li{
 	float:left;
@@ -273,23 +279,23 @@ body a,body a:hover,body a:active,body a:link{
 	margin-left: 16px;
 }
 .mainNav .currentNav01 {
-	background-image: url(../menu_hover01.png);
+	background-image: url(../menu_hover01_02.png);
 	background-repeat: no-repeat;
 	position: absolute;
 	left: -39px;
 	top: 0px;
 	background-position: 0px 0px;
-	height: 5px;
+	height: 13px;
 	width: 156px;
 }
 .mainNav .currentNav02 {
-	background-image: url(../menu_hover02.png);
+	background-image: url(../menu_hover02_02.png);
 	background-repeat: no-repeat;
 	position: absolute;
 	left: -39px;
 	bottom: 0px;
 	background-position: 0px 0px;
-	height: 5px;
+	height: 13px;
 	width: 156px;
 }
 
@@ -299,7 +305,7 @@ body a,body a:hover,body a:active,body a:link{
 	position: absolute;
 	left: 0px;
 	bottom: 21px;
-	z-index: 100;
+	z-index: 10000;
 	display: none;
 	background-image: url(../footer_menu_bg.png);
 	background-repeat: repeat-x;
@@ -430,6 +436,7 @@ body a,body a:hover,body a:active,body a:link{
 	bottom: 34px;
 	width: 100%;
 	display: none;
+	z-index:103;
 }
 .secondNav .secondNavMain .subNav {
 	position: absolute;
@@ -444,17 +451,18 @@ body a,body a:hover,body a:active,body a:link{
 	left: 90px;
 }
 .secondNav .secondNavMain .collection {
-	left: 260px;
+	left: 246px;
 }
 .subNav li a {
 	color: #FFF;
 	text-decoration: none;
 }
 .pageImage .leftSeason {
+	margin-top: 20px;
 	float: left;
 	background-image: url(../seasons.png);
 	background-repeat: no-repeat;
-	background-position: 0px 2px;
+	background-position: 13px -6px;
 	height: auto;
 	width: 178px;
 }
@@ -486,11 +494,14 @@ body a,body a:hover,body a:active,body a:link{
 .pageImage .imageGallery ul{
 	width: 212px;
 	height: auto;
+	position: relative;
+	top: 0px;
 }
 .pageImage .imageGallery .listMask{
 	width: 212px;
-	height:444px;
-	overflow:hidden;
+	height: 444px;
+	overflow: hidden;
+	position: relative;
 }
 .imageGallery ul li a img {
 	height: 146px;
@@ -551,25 +562,30 @@ body a,body a:hover,body a:active,body a:link{
 }
 .collectionChoice ul li {
 	float: left;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #666666;
+	/* [disabled]border-left-width: 1px; */
+	/* [disabled]border-left-style: solid; */
+	/* [disabled]border-left-color: #9b9b9b; */
+	color: #9b9b9b;
 }
 .collectionChoice ul .selected {
 	float: left;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #666666;
 	background-image: url(../icon_colloction.png);
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: 2px center;
 }
-
+.collectionChoice ul .selected a{
+	color: #333333;
+}
 .collectionChoice ul li a {
 	padding-right: 8px;
 	padding-left: 8px;
-	color: #666666;
+	color: #9b9b9b;
+	
 }
+.collectionChoice ul li a:hover {
+	color: #333333;
+}
+
 .collectionGallery .collectionLeft {
 	background-image: url(../button_left.png);
 	background-position: 0px 0px;
@@ -598,12 +614,15 @@ body a,body a:hover,body a:active,body a:link{
 }
 
 .collectionGallery ul {
-	width: 804px;
+	width: 9999px;
 	height: 267px;
+	position: relative;
 }
 .collectionGallery .collectionGalleryMask {
 	float: left;
 	height: 267px;
+	overflow: hidden;
+	width: 804px;
 }
 .collectionGallery ul li {
 	float: left;
@@ -751,4 +770,8 @@ body a,body a:hover,body a:active,body a:link{
 }
 .newsMask ul li a:hover{
 	color:#666;	
+}
+.pageImage .bigImage img {
+	height: 478px;
+	width: 342px;
 }
