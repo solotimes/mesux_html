@@ -7,7 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"/>
+<link rel="stylesheet" type="text/css" href="assets/javascripts/source/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css"/>
+
+
 
 </head>
 <body class="collection">
@@ -27,25 +30,25 @@
 		<div class="container collectionMain">
 			<div class="collectionChoice">
 				<ul>
-					<li><a href="">Winter2013</a></li>
-					<li class="selected"><a href="">Winter2013</a></li>
-					<li><a href="">Winter2013</a></li>
-					<li><a href="">Winter2013</a></li>
+					<li>|<a href="" class="transition">Winter2013</a></li>
+					<li class="selected">|<a href="" class="transition">Winter2013</a></li>
+					<li>|<a href="" class="transition">Winter2013</a></li>
+					<li>|<a href="" class="transition">Winter2013</a></li>
 				</ul>
 			</div>
 			<div class="collectionGallery">
-				<a href="" class="collectionLeft"></a>
+				<a href="" class="collectionLeft" id="sliderLeft"></a>
 				<div class="collectionGalleryMask">
-					<ul>
-						<li><a href=""><img src="assets/proudct03_m.png"></a></li>
-						<li><a href=""><img src="assets/proudct04_m.png"></a></li>
-						<li><a href=""><img src="assets/proudct03_m.png"></a></li>
-						<li><a href=""><img src="assets/proudct04_m.png"></a></li>
-						<li><a href=""><img src="assets/proudct03_m.png"></a></li>
-						<li><a href=""><img src="assets/proudct04_m.png"></a></li>
+					<ul id="cslider">
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct03_m.png"></a></li>
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct04_m.png"></a></li>
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct03_m.png"></a></li>
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct04_m.png"></a></li>
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct03_m.png"></a></li>
+						<li><a  href="assets/proudct03_m.png"><img src="assets/proudct04_m.png"></a></li>
 					</ul>
 				</div>
-				<a href="" class="collectionRight"></a>
+				<a href="" class="collectionRight" id="sliderRight"></a>
 			</div>
 		</div>
 	</div>
@@ -53,9 +56,9 @@
 		<div class="navbar container navfloat">
 			<ul class="mainNav">
 				<li class="current"><a href="home.html">HOME</a></li>
-				<li><a href="brand.html">BRAND</a></li>
+				<li dLink="brand"><a href="brand.html">BRAND</a></li>
 				<li><a href="pageimage.html">IMAGE</a></li>
-				<li><a href="collection.html">COLLECTION</a></li>
+				<li dLink="collection"><a href="collection.html">COLLECTION</a></li>
 				<li><a href="stores.html">STORES</a></li>
 				<li><a href="news.html">NEWS</a></li>
 				<li><a href="vip.html">VIP</a></li>
@@ -64,21 +67,21 @@
 			</ul>
 			<ul class="rightNav">
 				<li><a href="">Contact Us</a></li>
-				<li><a href="">Job</a></li>
+				<li><a href="" class="jobs">Job</a></li>
 				<li><a href="" class="musicAction">Music on</a></li>
 			</ul>
 		</div>
 		<div class="secondNav">
 			<div class="container secondNavMain">
 				<ul class="brand subNav">
-					<li><a href="">Brand Story</a></li>
-					<li><a href="">Brand Position</a></li>
+					<li><a href="" class="transition">Brand Story</a></li>
+					<li><a href="" class="transition">Brand Position</a></li>
 				</ul>
 				<ul class="collection subNav">
-					<li><a href="">Winter 2013</a></li>
-					<li><a href="">Autumn 2013</a></li>
-					<li><a href="">Sumer 2013</a></li>
-					<li><a href="">Spring 2013</a></li>
+					<li><a href="" class="transition">Winter 2013</a></li>
+					<li><a href="" class="transition">Autumn 2013</a></li>
+					<li><a href="" class="transition">Sumer 2013</a></li>
+					<li><a href="" class="transition">Spring 2013</a></li>
 				</ul>
 			</div>
 		</div>
@@ -126,27 +129,9 @@
 </body>
 <script type="text/javascript" src="assets/javascripts/jquery-1.8.3.min.js"></script>
 <script src="assets/javascripts/jquery.jplayer.min.js"></script>
-
+<script src="assets/javascripts/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="assets/javascripts/plugins.js"></script>
 <script type="text/javascript" src="assets/javascripts/main.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				m4a:"assets/mp3/sky.mp3",
-				oga:"assets/mp3/sky.mp3"
-			});
-		},
-		swfPath: "js",
-		supplied: "m4a, oga ,mp3",
-		wmode: "window",
-		smoothPlayBar: true,
-		keyEnabled: true
-	});
-});
-//]]>
-</script>
+
 </html>

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"/>
+<link rel="stylesheet" type="text/css" href="assets/javascripts/source/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css"/>
 
 </head>
@@ -69,9 +70,9 @@
 		<div class="navbar container navfloat">
 			<ul class="mainNav">
 				<li class="current"><a href="home.html">HOME</a></li>
-				<li><a href="brand.html">BRAND</a></li>
+				<li dLink="brand"><a href="brand.html">BRAND</a></li>
 				<li><a href="pageimage.html">IMAGE</a></li>
-				<li><a href="collection.html">COLLECTION</a></li>
+				<li dLink="collection"><a href="collection.html">COLLECTION</a></li>
 				<li><a href="stores.html">STORES</a></li>
 				<li><a href="news.html">NEWS</a></li>
 				<li><a href="vip.html">VIP</a></li>
@@ -80,21 +81,21 @@
 			</ul>
 			<ul class="rightNav">
 				<li><a href="">Contact Us</a></li>
-				<li><a href="">Job</a></li>
+				<li><a href="" class="jobs">Job</a></li>
 				<li><a href="" class="musicAction">Music on</a></li>
 			</ul>
 		</div>
 		<div class="secondNav">
 			<div class="container secondNavMain">
 				<ul class="brand subNav">
-					<li><a href="">Brand Story</a></li>
-					<li><a href="">Brand Position</a></li>
+					<li><a href="" class="transition">Brand Story</a></li>
+					<li><a href="" class="transition">Brand Position</a></li>
 				</ul>
 				<ul class="collection subNav">
-					<li><a href="">Winter 2013</a></li>
-					<li><a href="">Autumn 2013</a></li>
-					<li><a href="">Sumer 2013</a></li>
-					<li><a href="">Spring 2013</a></li>
+					<li><a href="" class="transition">Winter 2013</a></li>
+					<li><a href="" class="transition">Autumn 2013</a></li>
+					<li><a href="" class="transition">Sumer 2013</a></li>
+					<li><a href="" class="transition">Spring 2013</a></li>
 				</ul>
 			</div>
 		</div>
@@ -142,26 +143,8 @@
 <script type="text/javascript" src="assets/javascripts/jquery-1.8.3.min.js"></script>
 <script src="assets/javascripts/jquery.jplayer.min.js"></script>
 
+<script src="assets/javascripts/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="assets/javascripts/plugins.js"></script>
 <script type="text/javascript" src="assets/javascripts/main.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
-				oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
-			});
-		},
-		swfPath: "js",
-		supplied: "m4a, oga",
-		wmode: "window",
-		smoothPlayBar: true,
-		keyEnabled: true
-	});
-});
-//]]>
-</script>
 </html>

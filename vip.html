@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"/>
+<link rel="stylesheet" type="text/css" href="assets/javascripts/source/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css"/>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/vip.css"/>
 </head>
@@ -35,13 +36,12 @@
 				<p>Q：如何成为MESUX品牌的VIP？<br/>
 					A：凡在MESUX直营店和专卖店消费，即可申请办理入会。 申请VIP必须提供真实完整的个人资料。
 				</p>
-				<br/>
-				<p>Q：VIP可以享受哪些优惠？<br/>A：VIP消费享受积分累计、晋级礼品及各种优惠，可参加公司为 VIP精心打造的PARTY、沙龙、讲座、VIP专场等各项会员专享活动。</p><br/>
-				<p>Q：VIP积分累计有什么标准？积分有什么使用规则？<br/>A：不同等级VIP 享受不同积分规则（详见下表），满5000积分为1单位，可返利100元抵用金。累计至指定积分可换取相应礼品，已换取礼品或抵用积分即时扣除，不可重复使用。</p>
-				<a href="#"><img src="assets/vip_tb.jpg"/></a>
-				<br/>
+				<p>Q：VIP可以享受哪些优惠？<br/>A：VIP消费享受积分累计、晋级礼品及各种优惠，可参加公司为 VIP精心打造的PARTY、沙龙、讲座、VIP专场等各项会员专享活动。</p>
+				<p>Q：VIP积分累计有什么标准？积分有什么使用规则？<br/>
+					A：不同等级VIP 享受不同积分规则（详见下表），满5000积分为1单位，可返利100元抵用金。累计至指定积分可换取相应礼品，已换取礼品或抵用积分即时扣除，不可重复使用。</p>
+				<a href="javascript:void(0)"><img src="assets/vip_tb.jpg"/></a>
 				<p>Q：VIP积分有效期是多久？<br/>A：积分有效期为发卡日起计12个月止，逾期将自动清零。任何等级时限为12个月，不进则退，起始时间为升级日当天。<br/>
-				&nbsp;&nbsp;&nbsp;&nbsp;（如您2012年1月1日升级为E级会员，您需在2012年12月31日前的12个月内累计消费金额达到S级标准,若未达到将自动降至M级，消费积分保留，兑换积分清零。）</p><br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;（如您2012年1月1日升级为E级会员，您需在2012年12月31日前的12个月内累计消费金额达到S级标准,若未达到将自动降至M级，消费积分保留，兑换积分清零。）</p>
 				 <p>Q：出现退换货品的情况，积分如何处理？已经兑换的礼品如何处理？</p>
 			 </div>
 		   </div>
@@ -52,33 +52,33 @@
 	<div class="nav">
 		<div class="navbar container navfloat">
 			<ul class="mainNav">
-				<li><a href="home.html">HOME</a></li>
-				<li><a href="brand.html">BRAND</a></li>
+				<li class="current"><a href="home.html">HOME</a></li>
+				<li dLink="brand"><a href="brand.html">BRAND</a></li>
 				<li><a href="pageimage.html">IMAGE</a></li>
-				<li><a href="collection.html">COLLECTION</a></li>
+				<li dLink="collection"><a href="collection.html">COLLECTION</a></li>
 				<li><a href="stores.html">STORES</a></li>
 				<li><a href="news.html">NEWS</a></li>
-				<li class="current"><a href="#">VIP</a></li>
+				<li><a href="vip.html">VIP</a></li>
 				<div class="currentNav01"></div>
 				<div class="currentNav02"></div>
 			</ul>
 			<ul class="rightNav">
 				<li><a href="">Contact Us</a></li>
-				<li><a href="">Job</a></li>
+				<li><a href="" class="jobs">Job</a></li>
 				<li><a href="" class="musicAction">Music on</a></li>
 			</ul>
 		</div>
 		<div class="secondNav">
 			<div class="container secondNavMain">
 				<ul class="brand subNav">
-					<li><a href="">Brand Story</a></li>
-					<li><a href="">Brand Position</a></li>
+					<li><a href="" class="transition">Brand Story</a></li>
+					<li><a href="" class="transition">Brand Position</a></li>
 				</ul>
 				<ul class="collection subNav">
-					<li><a href="">Winter 2013</a></li>
-					<li><a href="">Autumn 2013</a></li>
-					<li><a href="">Sumer 2013</a></li>
-					<li><a href="">Spring 2013</a></li>
+					<li><a href="" class="transition">Winter 2013</a></li>
+					<li><a href="" class="transition">Autumn 2013</a></li>
+					<li><a href="" class="transition">Sumer 2013</a></li>
+					<li><a href="" class="transition">Spring 2013</a></li>
 				</ul>
 			</div>
 		</div>
@@ -127,26 +127,8 @@
 <script type="text/javascript" src="assets/javascripts/jquery-1.8.3.min.js"></script>
 <script src="assets/javascripts/jquery.jplayer.min.js"></script>
 
+<script src="assets/javascripts/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="assets/javascripts/plugins.js"></script>
 <script type="text/javascript" src="assets/javascripts/main.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				m4a:"assets/mp3/sky.mp3",
-				oga:"assets/mp3/sky.mp3"
-			});
-		},
-		swfPath: "js",
-		supplied: "m4a, oga ,mp3",
-		wmode: "window",
-		smoothPlayBar: true,
-		keyEnabled: true
-	});
-});
-//]]>
-</script>
 </html>

@@ -1,12 +1,9 @@
 .vip {
-	height: 620px;
+	height: auto;
 	background: #efefef;
-	font: Arial, Helvetica, sans-serif;
 }
 .vip2{
-	height: 510px;
-	background: #efefef;
-	font: Arial, Helvetica, sans-serif;
+	height: auto;
 }
 .vip_content {
 	width:908px;
@@ -20,13 +17,11 @@
 }
 .vip_info {
 	float: left;
-	height: 520px;
 	width: 600px;
 	background: #d7d7d7;
 	padding: 20px;
 	margin-top: 24px;
 	margin-right: 100px;
-	margin-bottom: 32px;
 	margin-left: 0;
 }
 .vipnav{
@@ -49,11 +44,13 @@
 .vip_info p {
 	font-size: 11px;
 	color: #5d5d5d;
+	line-height: 14px;
+	padding-bottom: 16px;
 }
 .vip_info a {
-	margin-top: 15px;
 	display: block;
 	margin-left: 25px;
+	padding-bottom: 10px;
 }
 .login_info {
 	float: left;
@@ -62,7 +59,7 @@
 	margin-top: 150px;
 	margin-left: 73px;
 	overflow: hidden;
-	background:url(../login_bg.jpg) no-repeat;
+	background: url(../login_bg.png) no-repeat;
 }
 .login_info h4 {
 	font-size: 12px;
@@ -75,14 +72,16 @@
 	font-size: 11px;
 	color: #FFF;
 	padding-left: 80px;
+	display: block;
+	overflow: hidden;
+	width: 300px;
 }
 .login input {
-	margin-left: 15px;
-	padding: 2px;
 	margin-bottom: 5px;
-	margin-top: 5px;
-	background:#e4e4e4;
-	border:none;
+	border: none;
+	background-color: transparent;
+	height: 25px;
+	line-height: 25px;
 }
 .login a {
 }

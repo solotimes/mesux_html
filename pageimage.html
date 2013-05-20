@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"/>
+<link rel="stylesheet" type="text/css" href="assets/javascripts/source/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css"/>
 
 </head>
@@ -27,35 +28,35 @@
 		<div class="container pageImage">
 			<div class="leftSeason">
 				<ul>
-					<li class="selected"><a href="">Autumn Winter 2013</a></li>
-					<li><a href="">Spring Summer 2013</a></li>
-					<li><a href="">Autumn Winter 2012</a></li>
-					<li><a href="">Spring Summer 2012</a></li>
+					<li><a href="javascript:void(0)">Spring Summer 2013</a></li>
+					<li><a href="javascript:void(0)">Autumn Winter 2012</a></li>
+					<li><a href="javascript:void(0)">Spring Summer 2012</a></li>
+					<li class="selected"><a href="javascript:void(0)">Autumn Winter 2013</a></li>
 				</ul>
 			</div>
 			<div class="imageGallery">
 				<div class="listMask">
-					<ul>
-						<li><a href=""><img src="assets/product01.png" bighref="assets/product01_l.png"></a></li>
-						<li><a href=""><img src="assets/product02.png" bighref="assets/product02.png"></a></li>
-						<li><a href=""><img src="assets/product02.png"></a></li>
-						<li><a href=""><img src="assets/product01.png"></a></li>
-						<li><a href=""><img src="assets/product01.png"></a></li>
-						<li><a href=""><img src="assets/product02.png"></a></li>
+					<ul id="slider">
+						<li><a href="" dimage="assets/product01_l.png"><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
 						
-						<li><a href=""><img src="assets/product02.png"></a></li>
-						<li><a href=""><img src="assets/product01.png"></a></li>
-						<li><a href=""><img src="assets/product01.png"></a></li>
-						<li><a href=""><img src="assets/product02.png"></a></li>
-						<li><a href=""><img src="assets/product02.png"></a></li>
-						<li><a href=""><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product01.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product02.png"></a></li>
+						<li><a href="" dimage="assets/product02.png"><img src="assets/product01.png"></a></li>
 					</ul>
 				</div>
-				<a href="" class="upMore upMoreHas"></a>
-				<a href="" class="donwMore donwMoreHas"></a>
+				<a href="" class="upMore upMoreHas noele" id="sliderTop"></a>
+				<a href="" class="donwMore donwMoreHas" id="sliderBottom"></a>
 			</div>
 			<div class="bigImage"><img src="assets/product01_l.png"></div>
-			<div class="bigImage" style="display:none;"><img src="assets/product02.png"></div>
+			
 			
 		</div>
 	</div>
@@ -86,7 +87,7 @@
 			</ul>
 			<ul class="rightNav">
 				<li><a href="">Contact Us</a></li>
-				<li><a href="">Job</a></li>
+				<li><a href="" class="jobs">Job</a></li>
 				<li><a href="" class="musicAction">Music on</a></li>
 			</ul>
 		</div>
@@ -95,9 +96,9 @@
 		<div class="navbar container navfloat">
 			<ul class="mainNav">
 				<li class="current"><a href="home.html">HOME</a></li>
-				<li><a href="brand.html">BRAND</a></li>
+				<li dLink="brand"><a href="brand.html">BRAND</a></li>
 				<li><a href="pageimage.html">IMAGE</a></li>
-				<li><a href="collection.html">COLLECTION</a></li>
+				<li dLink="collection"><a href="collection.html">COLLECTION</a></li>
 				<li><a href="stores.html">STORES</a></li>
 				<li><a href="news.html">NEWS</a></li>
 				<li><a href="vip.html">VIP</a></li>
@@ -106,21 +107,21 @@
 			</ul>
 			<ul class="rightNav">
 				<li><a href="">Contact Us</a></li>
-				<li><a href="">Job</a></li>
+				<li><a href="" class="jobs">Job</a></li>
 				<li><a href="" class="musicAction">Music on</a></li>
 			</ul>
 		</div>
 		<div class="secondNav">
 			<div class="container secondNavMain">
 				<ul class="brand subNav">
-					<li><a href="">Brand Story</a></li>
-					<li><a href="">Brand Position</a></li>
+					<li><a href="" class="transition">Brand Story</a></li>
+					<li><a href="" class="transition">Brand Position</a></li>
 				</ul>
 				<ul class="collection subNav">
-					<li><a href="">Winter 2013</a></li>
-					<li><a href="">Autumn 2013</a></li>
-					<li><a href="">Sumer 2013</a></li>
-					<li><a href="">Spring 2013</a></li>
+					<li><a href="" class="transition">Winter 2013</a></li>
+					<li><a href="" class="transition">Autumn 2013</a></li>
+					<li><a href="" class="transition">Sumer 2013</a></li>
+					<li><a href="" class="transition">Spring 2013</a></li>
 				</ul>
 			</div>
 		</div>
@@ -170,26 +171,8 @@
 <script type="text/javascript" src="assets/javascripts/jquery-1.8.3.min.js"></script>
 <script src="assets/javascripts/jquery.jplayer.min.js"></script>
 
+<script src="assets/javascripts/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="assets/javascripts/plugins.js"></script>
 <script type="text/javascript" src="assets/javascripts/main.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-$(document).ready(function(){
 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
-				oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
-			});
-		},
-		swfPath: "js",
-		supplied: "m4a, oga",
-		wmode: "window",
-		smoothPlayBar: true,
-		keyEnabled: true
-	});
-});
-//]]>
-</script>
 </html>
