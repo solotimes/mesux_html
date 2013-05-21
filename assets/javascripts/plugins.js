@@ -181,6 +181,7 @@ jQuery.extend( jQuery.easing,
 
 (function($){
 	$.fn.G_mousePosition=function(settings){
+<<<<<<< HEAD
 		//moveOn is the mouseover target;
 		//direction can be vertical or horizontal 
 		
@@ -195,10 +196,22 @@ jQuery.extend( jQuery.easing,
 			var tWidth=target.width();
 			var tDirection='stop';//vertical: 3 action- stop,up,down;horizontal: 3action- stop,left,right
 			
+=======
+		var defaults={moveOn:$(document),point:'1'};//point:1 topLeft,2 topRight,3 bottomRight,4
+		var options=jQuery.extend(defaults,settings);
+		
+		return this.each(function(settings){
+			/* function calculateDistance(elem, mouseX, mouseY) {
+				return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+			}*/
+			
+			var target=$(this);
+>>>>>>> 3596631036bdaaefb2a3ad2f61670c191cb2104c
 			options.moveOn.mousemove(function(e) {
 				mouseX=e.pageX;
 				mouseY=e.pageY;
 				
+<<<<<<< HEAD
 				var dLeft=e.pageX-target.offset().left;
 				var dTop=e.pageY-target.offset().top;
 				
@@ -230,6 +243,14 @@ jQuery.extend( jQuery.easing,
 					//console.log(dLeft,dTop,tDirection);
 					target.data('mouse',{'dLeft':dLeft,'dTop':dTop,'ddirection':tDirection});	
 				}
+=======
+				dLeft=e.pageX-$(this).offset().left;
+				dTop=e.pageY-$(this).offset().top;
+				
+				console.log(dLeft,dTop);
+				return {'dLeft':dLeft,'dTop':dTop};
+				
+>>>>>>> 3596631036bdaaefb2a3ad2f61670c191cb2104c
 			});
 			
 			

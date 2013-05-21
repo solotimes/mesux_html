@@ -294,8 +294,13 @@ body a,body a:hover,body a:active,body a:link{
 	position: absolute;
 	left: -39px;
 	bottom: 0px;
+<<<<<<< HEAD
 	background-position: 0px -8px;
 	height: 5px;
+=======
+	background-position: 0px 0px;
+	height: 13px;
+>>>>>>> 3596631036bdaaefb2a3ad2f61670c191cb2104c
 	width: 156px;
 }
 
@@ -456,7 +461,11 @@ body a,body a:hover,body a:active,body a:link{
 	left: 90px;
 }
 .secondNav .secondNavMain .collection {
+<<<<<<< HEAD
 	left: 239px;
+=======
+	left: 246px;
+>>>>>>> 3596631036bdaaefb2a3ad2f61670c191cb2104c
 }
 .subNav li a {
 	color: rgb(218,218,218);
@@ -804,6 +813,7 @@ body a,body a:hover,body a:active,body a:link{
 	height: 478px;
 	width: 342px;
 }
+<<<<<<< HEAD
 .secondNavMain .subNav .active {
 	color: #fff;
 }
@@ -977,3 +987,5 @@ body a,body a:hover,body a:active,body a:link{
 }
 
 
+=======
+>>>>>>> 3596631036bdaaefb2a3ad2f61670c191cb2104c
