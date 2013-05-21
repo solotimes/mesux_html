@@ -245,7 +245,7 @@ window.Geffect={
 				init:function(){
 					var intervalIDTop=0;
 					var intervalIDDown=0;
-					Dslider={
+					var Dslider={
 						Did:'#slider',
 						Dtip:'3',
 						Dtime:1000,
@@ -542,7 +542,7 @@ window.Geffect={
 				init:function(){
 					var intervalIDTop=0;
 					var intervalIDDown=0;
-					Dslider={
+				    var Dslider={
 						Did:'#slider',
 						Dtip:'9',
 						Dtime:500,
@@ -681,7 +681,152 @@ window.Geffect={
 					this.target.find('.newsMask').unbind('mouseover');
 					}
 			},		
-			
+	newsPage:{/*
+				target:$('.newsMask02'),
+				action:'mouseover',
+				init:function(){
+					var intervalIDTop=0;
+					var intervalIDDown=0;
+					var Dslider={
+						Did:'.newsMask02 .pageBody',
+						Dmaskid:'.newsMask02',
+						DmaskH:$(Dslider.DmaskH).height(),
+						DidH:$(Dslider.Did).height(),
+						Dspeed:10,
+						
+						Dslide:function(time){
+							var time=time||500;
+							
+							var nowTop=parseInt($(Dslider.Did).css("top"));
+							var timeVar=(nowTop-(Dslider.DidH-Dslider.DmaskH))/Dslider.Dspeed;
+							$('')
+							
+							if(now<Dslider.Dnum()-Dslider.Dtip){
+							
+								
+								if(!$(Dslider.Did).is(":animated")){
+									$(Dslider.Did).animate({"top":(nowTop-Dslider.Dheight)+"px"},time);
+								}
+								if($("#sliderTop").hasClass('noele')){
+									$('#sliderTop').removeClass('noele');
+								}
+								
+							}
+								
+							else{
+								if(!$("#sliderBottom").hasClass('noele')){
+									$('#sliderBottom').addClass('noele');
+								}	
+								if(!$(Dslider.Did).is(":animated")){
+									$(Dslider.Did).animate({"top":(Dslider.Dnum-Dslider.Dtip)*Dslider.Dheight+'px'},time,'easeOutBounce');
+									}
+								}
+								
+								
+							},
+						DslideDown:function(time){
+							var time=time||500;
+							
+							var nowTop=parseInt($(Dslider.Did).css("top"));
+							now=(-1)*nowTop/Dslider.Dheight;
+							if(now>0){
+									if(!$(Dslider.Did).is(":animated")){
+										$(Dslider.Did).animate({"top":(nowTop+Dslider.Dheight)+"px"},time,'swing');
+									}
+									if($("#sliderBottom").hasClass('noele')){
+										$('#sliderBottom').removeClass('noele');
+									}
+								
+								}
+							else{
+									
+									if(!$("#sliderTop").hasClass('noele')){
+										$('#sliderTop').addClass('noele');
+									}
+									if(!$(Dslider.Did).is(":animated")){
+										$(Dslider.Did).animate({"top":'0px'},time,'easeOutBounce');
+										
+									}
+									
+								}
+							
+							},
+						DintervalTop:function(){
+							topLock=true;
+							downLock=false;
+							intervalIDTop=setInterval(function(){Dslider.Dslide();},Dslider.Dtime);
+							},
+						DintervalDown:function(){
+							downLock=false;
+							topLock=true;
+							intervalIDDown=setInterval(function(){Dslider.DslideDown();},Dslider.Dtime);
+							},
+						DstopInterval:function(){
+							downLock=false;
+							topLock=false;
+								clearInterval(intervalIDTop);
+								
+								clearInterval(intervalIDDown);
+							},
+						
+						
+						init:function(){
+							$("#sliderBottom").click(function(){
+								Dslider.Dslide();
+								return false;
+								});
+							$("#sliderTop").click(function(){
+								Dslider.DslideDown();
+								return false;
+								});
+							$('.newsMask').G_mousePosition();
+							
+							$('.newsMask').mousemove(function(){
+								var action=$(this).data('mouse').ddirection;
+								//console.log(action);
+								if(action=='down'){
+									if(!topLock){
+										Dslider.DstopInterval();
+										Dslider.DintervalTop();
+										//console.log('goTop');
+									}
+								}
+								else if(action=='up'){
+									if(!downLock){
+										Dslider.DstopInterval();
+										Dslider.DintervalDown();
+										//console.log('goDown');
+									}
+								}
+								else{
+									Dslider.DstopInterval();	
+									//console.log('goStop');
+								}
+								
+							});
+							$('.newsMask').mouseleave(function(){
+								Dslider.DstopInterval();	
+								//console.log('goStop');
+							});
+							
+							
+							}
+						
+							
+						};
+					
+					
+					Dslider.init();
+					
+					
+				},
+				
+				stop:function(){
+					this.target.unbind(this.action);
+					this.target.find('.newsMask').unbind('mouseover');
+					}
+					*/
+			},				
 			
 			
 	
